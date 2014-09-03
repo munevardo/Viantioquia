@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Joseluismunevar@gmail.com">
+
+    <title>Viatioquia el lugar donde nace antioquia</title>
+
+    <!--estilos-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/input.css">
+  
+
+    <!-- js -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript" src="js/ligthbox.js"></script>
+     <script src="js/MapaRutas.js" type="text/javascript"></script>
+
+</head>
+    
+<body>
+<section id="containertab">
+    <div class="colortab">a</div>
+    <div class="colortab">b</div>
+    <div class="colortab">c</div>
+    <div class="colortab">f</div>
+    <div class="colortab">a</div>
+</section>
+<header>
+    <nav class="nav-planer">
+
+        <a href="index.html" ><img id="logo" src="img/logo.png" alt="logo de aviantioquia"/></a>
+
+    
+        <a class="buttom-menu">*</a>
+            <div id="menu">
+                <ul>
+                    <li><a href="planear-restaurantes.html">Planea tu viaje</a> </li>
+                    <li><a href="#">Actividades</a></li>
+                    <li><a href="#">Municipios</a></li>
+                    <li><a href="#">contacto</a></li>
+                    <li><a href="#">registro</a></li>
+                    <button><a href="javascript:showLightbox();">login</a></button>
+                </ul>
+            </div>
+    </nav>
+</header>
+
+
+<section class="containerplaner">
+    <article class="containermap">
+     <div id="control">
+        <button style="heigth="100 width="100" onclick="calcRoute()">Calcular</button>
+        <strong>Start:</strong>
+        <select id="start" onchange="calcRoute();">
+            <option value="Medellin">Medellin</option>
+            <option value="Cali">Cali</option>
+            <option value="Cartagena">Cartagena</option>
+            <option value="Barranquilla">Barranquilla</option>
+        </select>
+        <strong>End:</strong>
+        <select id="end" onchange="calcRoute();">
+            <option value="Hispania">Hispania</option>
+            <option value="Jardin">Jardin</option>    
+        </select>
+    </div>
+    <div id="mapaglobal">
+
+    <!---mapa-->
+
+    </div>
+    </article>
+    <div class="pestañas">
+        <button class="pestaña">Viaje en auto</button>
+         <button class="pestaña">trasporte publico</button>
+    </div>      
+        
+    <article class="DirectionPanel">
+    <div>
+       
+    
+
+    </div>
+    </article> 
+</section>
+
+<section class="recomendados">
+     <article class="restaurante">
+        <figure>
+            <img src="img/recomen.jpg" alt="restaurante de la zona">
+        </figure>
+            <figcaption>Quiero saber más sobre Jardin</figcaption>
+    </article>
+    <article class="restaurante">
+        <figure>
+            <img src="img/recomen.jpg" alt="restaurante de la zona">
+        </figure>
+            <figcaption>Quiero saber más sobre Hispania</figcaption>
+    </article>
+    <article class="restaurante">
+        <figure>
+            <img src="img/recomen.jpg" alt="restaurante de la zona">
+        </figure>
+            <figcaption>Quiero saber más sobre Ardes</figcaption>
+    </article>
+</section>
+
+
+<footer>
+    <label>ayudanos a seguir creciendo</label>
+    <input type="text" placehoolder="email">
+</footer>

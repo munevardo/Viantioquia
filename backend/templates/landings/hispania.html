@@ -1,0 +1,101 @@
+
+{% extends "landings/master.html" %}
+
+ {% block title %}Inicio{% endblock %}
+
+ {% block imports %}
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=True"></script>
+    <script type="text/javascript" src="/static/js/SitiosInteres.js"></script>
+     <script type="text/javascript" src="/static/js/landingHispania.js"></script>
+
+ {% endblock %}
+
+
+
+ <!-- --------------------!Contaier1!------------------ -->
+{% block container1 %}
+
+ <section id="containerHispania">
+          
+
+                 <article id="pitch">
+                <h1>
+                    <span>
+                    &nbsp;Hispania Antioquia&nbsp;
+                   
+                    </span>
+                </h1>
+                 <p>
+                es un municipio de Colombia, localizado en la subregión Suroeste del departamento de Antioquia. Limita por el norte con los municipios de Bolívar y Pueblorrico, por el este con el municipio de Pueblorrico, por el sur con los municipios de Andes y Betania y por el oeste con los municipios de Betania y Bolívar. Su cabecera dista 98 kilómetros de la ciudad de Medellín, capital del departamento de Antioquia.</p>
+                   
+
+                </article>
+                
+                 <article id="mailinghispano">
+                    <button class="info">Quiero saber más</button>
+
+                    <input placeholder="Email">
+
+                 </article>
+              <br>
+            <br>
+         </section>
+
+
+ {% endblock %}
+
+
+
+ <!-- --------------------!Contaier2!------------------ -->
+{% block container2 %}
+<section id="map-samanes">
+    
+    <!---mapas-->
+
+
+</section>
+ {% endblock %}
+
+
+
+
+<!-- --------------------!Contaier3!------------------ -->
+{% block container3 %}
+    
+            <section id="actividades">
+            <h2>¿Que hay para hacer?</h2>
+             <div class="actividades-menu">
+                <figure>
+                    <a href="H-actividad.html"><img  class="itemicon" src="/static/img/cicloicon.jpg" alt"icono de aventura"></a> 
+                </figure>
+                <figure>
+                    <a href="#"><img  class="itemicon" src="/static/img/descansoicon.jpg" alt"icono de aventura"></a>
+                </figure>
+                <figure>
+                    <a href="H-natural.html"><img  class="itemicon" src="/static/img/naturaicon.jpg" alt"icono de aventura"></a>
+                </figure>
+            </div>
+                <article class="actividad"> 
+                        <a href=""><img  class="imgitem" src="/static/img/charco.jpg" alt="charcos en jardin"/></a>
+                 <h3>Ruta el silencio</h3>
+                 <p>un lugar en la tranquilidad de las montañas, donde el paso de las mulas se conjuga con el sonar de las aves.</p>
+                  <a href="#"><button>Saber más</button></a>
+                </article>
+                <article class="actividad">
+                    <a href="#"><img  class="imgitem" src="/static/img/cabalgata.jpg" alt="cabalgata en el campo"/></a>
+                    <h3>Cabalgata tradicional</h3>
+                    <p>Disfruta de cabalgatas en compañía de los que más quieres, sal de la ciudad y diviértete con la aventura que te ofrece.</p>
+                     <a href="#"><button>Saber más</button></a>
+                </article>
+                <article class="actividad">
+                    <a href="H-natural.html"><img  class="imgitem" src="/static/img/aves.jpg" alt="observe las aver de hispania"/></a>
+                    <h3>Observación de aves</h3>
+                    <p>
+                    Esta afición principalmente se basa en el arte de reconocer las distintas especies de aves por su plumaje o canto. 
+                    </p>
+                    <a href="#"><button>Saber más</button></a>
+                </article>
+            </section>
+        </section>
+
+{% endblock %}

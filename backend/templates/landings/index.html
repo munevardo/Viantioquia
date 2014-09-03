@@ -1,0 +1,98 @@
+
+{% extends "landings/master.html" %}
+
+ {% block title %}Inicio{% endblock %}
+  
+
+<!-- --------------------!Contaier1!------------------ -->
+{% block container1 %}
+
+ <section id="containerindex">
+         <article id="pitch">
+        <h1>
+            <span>
+            &nbsp;Aqui esta lo que los Mapas&nbsp;
+            <br>
+             &nbsp; no pueden Describir &nbsp;
+            </span>
+        </h1>
+         <p>
+         tu puedes aportar a el desarrollo de esta cumunidad, queremos escuchar lo que tienes paradecir de  antioquia y poder encontrar los mejores lugares para visitar</p>
+           
+
+        </article>
+        
+         <article id="cotizador">
+            <h2>Suroeste Antioqueño</h2>
+            <p>Cotizar viaje</p><input type="date">
+         </article>
+      <br>
+    <br>
+ </section>
+
+
+{% endblock %}
+
+
+
+
+
+<!-- --------------------!Contaier2!------------------ -->
+{% block container2 %}
+
+<section id="municipios">
+                <article class="Municipio">
+                   <h2>Hispania</h2>
+                   <p>Hispania es el corazón del suroeste tierra de arrieros y cafeteros  no querrá dejar la calidez de su gente y su clima.  </p>
+                   <a href="/hispania/"><button>saber más</button></a>
+                </article>
+                <article class="Municipio">
+                    <h2>Andes</h2>
+                    <p>Tierra cafetera por excelencia el corazón industrial del suroeste  andes es magia por descubrir día a día
+                    </p>
+                    <a href="/andes/"><button>Saber más</button></a>
+                </article>
+                <article class="Municipio">
+                    <h2>Jardin</h2>
+                    <p>Tierra cafetera por excelencia el corazón industrial del suroeste  andes es magia por descubrir día a día
+</p>
+                    <a href="/jardin/"><button>Saber más</button></a>
+                </article>
+</section> 
+
+{% endblock %}
+
+
+
+
+
+<!-- --------------------!Contaier3!------------------ -->
+{% block container3 %}
+
+<section id="actividades">
+                <article class="actividad">
+                        <img  class="itemicon" src="/static/img/cicloicon.jpg" alt"icono de aventura">
+                        <img  class="imgitem" src="/static/img/charco.jpg" alt="charcos en jardin"/>
+                 <h3>Ruta el silencio</h3>
+                 <p>un lugar en la tranquilidad de las montañas, donde el paso de las mulas se conjuga con el sonar de las aves.</p>
+                 <button>Saber más</button>
+                </article>
+                <article class="actividad">
+                    <img  class="itemicon" src="/static/img/descansoicon.jpg" alt"icono de aventura">
+                    <img  class="imgitem" src="/static/img/cabalgata.jpg" alt="cabalgata en el campo"/>
+                    <h3>Cabalgata tradicional</h3>
+                    <p>Disfruta de cabalgatas en compañía de los que más quieres, sal de la ciudad y diviértete con la aventura que te ofrece.</p>
+                    <button>Saber más</button>
+                </article>
+                <article class="actividad">
+                    <img  class="itemicon" src="/static/img/naturaicon.jpg" alt"icono de aventura">
+                    <img  class="imgitem" src="/static/img/aves.jpg" alt="observe las aver de hispania"/>
+                    <h3>Observación de aves</h3>
+                    <p>
+                    Esta afición principalmente se basa en el arte de reconocer las distintas especies de aves por su plumaje o canto. 
+                    </p>
+                    <button>Saber más</button>
+                </article>
+            </section>
+
+{% endblock %}

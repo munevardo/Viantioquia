@@ -1,0 +1,96 @@
+
+{% extends "landings/master.html" %}
+
+ {% block title %}Inicio{% endblock %}
+
+ {% block imports %}
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=True"></script>
+    <script type="text/javascript" src="/static/js/SitiosInteres.js"></script>
+
+ {% endblock %}
+
+<!-- --------------------!Contaier1!------------------ -->
+{% block container1 %}
+
+
+ <section id="containerJardin">
+          
+
+                 <article id="pitch">
+                <h1>
+                    <span>
+                    &nbsp;Jardin  Antioquia&nbsp;
+                   
+                    </span>
+                </h1>
+                 <p>
+                jardin antiquia es  es un municipio ubicado al sur occidente de Antioquia. Jardín cuenta con un número de habitantes de 14.000 personas, 7.000 son mujeres y 7.000 hombres. Limita por el norte con los municipios de Andes, Jericó y Támesis, por el este con el mismo municipio de Támesis, por el sur con el departamento de Caldas, y por el oeste nuevamente con la población de Andes. Su cabecera dista 134 kilómetros de la ciudad de Medellín, capital del departamento de Antioquia. Posé una extensión de 224 kilómetros cuadrados.</p>
+                   
+
+                </article>
+                
+                 <article id="mailinghispano">
+                    <button class="info">Quiero saber más</button>
+
+                    <input placeholder="email">
+
+                 </article>
+              <br>
+            <br>
+         </section>
+
+
+         {% endblock %}
+
+
+
+<!-- --------------------!Contaier2!------------------ -->
+{% block container2 %}
+<section id="map-samanes" >
+    
+    <!---mapas-->
+
+
+</section>
+
+{% endblock %}
+
+
+
+<!-- --------------------!Contaier3!------------------ -->
+{% block container3 %}
+
+    
+            <section id="actividades">
+                <article class="actividad">
+                        <img  class="itemicon" src="/static/img/cicloicon.jpg" alt"icono de aventura">
+                        <img  class="imgitem" src="/static/img/parapente.png" alt="charcos en jardin"/>
+                 <h3>Parapente en Jardin</h3>
+                 <p>un lugar en la tranquilidad de las montañas, donde el paso de las mulas se conjuga con el sonar de las aves.</p>
+                 <button>Saber más</button>
+                </article>
+                <article class="actividad">
+                    <img  class="itemicon" src="/static/img/descansoicon.jpg" alt"icono de aventura">
+                    <img  class="imgitem" src="/static/img/catias.png" alt="cabalgata en el campo"/>
+                    <h3>Fiestas de Catias</h3>
+                    <p>Disfruta de cabalgatas en compañía de los que más quieres, sal de la ciudad y diviértete con la aventura que te ofrece.</p>
+                    <button>Saber más</button>
+                </article>
+                <article class="actividad">
+                    <img  class="itemicon" src="/static/img/naturaicon.jpg" alt"icono de aventura">
+                    <img  class="imgitem" src="/static/img/aves.jpg" alt="observe las aver de hispania"/>
+                    <h3>Observación de aves</h3>
+                    <p>
+                    Esta afición principalmente se basa en el arte de reconocer las distintas especies de aves por su plumaje o canto. 
+                    </p>
+                    <button>Saber más</button>
+                </article>
+            </section>
+        </section>
+
+
+{% endblock %}
+
+
+
+ 

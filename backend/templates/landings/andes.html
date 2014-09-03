@@ -1,0 +1,100 @@
+
+{% extends "landings/master.html" %}
+
+ {% block title %}Inicio{% endblock %}
+
+ {% block imports %}
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=True"></script>
+    <script type="text/javascript" src="/static/js/SitiosInteres.js"></script>
+
+ {% endblock %}
+
+
+ <!-- --------------------!Contaier1!------------------ -->
+{% block container1 %}
+
+ <section id="containerAndes">
+          
+
+                 <article id="pitch">
+                <h1>
+                    <span>
+                    &nbsp;Andes Antioquia&nbsp;
+                   
+                    </span>
+                </h1>
+                 <p>
+               es un municipio del Suroeste antioqueño, situado en la cordillera Occidental de los Andes Colombianos; en el extremo suroccidental del departamento de Antioquia</p>
+                   
+
+                </article>
+                
+                 <article id="mailinghispano">
+                    <button class="info">Quiero saber más</button>
+
+                    <input placeholder="email">
+
+                 </article>
+              <br>
+            <br>
+         </section>
+
+
+
+
+    {% endblock %}
+
+
+
+<!-- --------------------!Contaier2!------------------ -->
+{% block container2 %}
+
+<section id="map-samanes" >
+    
+    <!---mapas-->
+
+</section>
+
+
+{% endblock %}
+
+<!-- --------------------!Contaier3!------------------ -->
+{% block container3 %}
+    
+            <section id="actividades">
+                <article class="actividad">
+                        <img  class="itemicon" src="/static/img/cicloicon.jpg" alt"icono de aventura">
+                        <img  class="imgitem" src="/static/img/charco.jpg" alt="charcos en jardin"/>
+                 <h3>Ruta el silencio</h3>
+                 <p>un lugar en la tranquilidad de las montañas, donde el paso de las mulas se conjuga con el sonar de las aves.</p>
+                 <button>Saber más</button>
+                </article>
+                <article class="actividad">
+                    <img  class="itemicon" src="/static/img/descansoicon.jpg" alt"icono de aventura">
+                    <img  class="imgitem" src="/static/img/cabalgata.jpg" alt="cabalgata en el campo"/>
+                    <h3>Cabalgata tradicional</h3>
+                    <p>Disfruta de cabalgatas en compañía de los que más quieres, sal de la ciudad y diviértete con la aventura que te ofrece.</p>
+                    <button>Saber más</button>
+                </article>
+                <article class="actividad">
+                    <img  class="itemicon" src="/static/img/naturaicon.jpg" alt"icono de aventura">
+                    <img  class="imgitem" src="/static/img/aves.jpg" alt="observe las aver de hispania"/>
+                    <h3>Observación de aves</h3>
+                    <p>
+                    Esta afición principalmente se basa en el arte de reconocer las distintas especies de aves por su plumaje o canto. 
+                    </p>
+                    <button>Saber más</button>
+                </article>
+            </section>
+        </section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+ 

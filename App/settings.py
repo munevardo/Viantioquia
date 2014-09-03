@@ -72,7 +72,7 @@ ROOT_URLCONF = 'App.urls'
 WSGI_APPLICATION = 'App.wsgi.application'
 
 TEMPLATE_DIRS = (
-	'backend/templates',
+	'backend/templates/',
 )
 
 INSTALLED_APPS = (

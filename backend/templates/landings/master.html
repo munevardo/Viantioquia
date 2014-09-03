@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		{% block description %}{% endblock %}
+		<title>{% block title %}{% endblock %}</title>
+		
+		{% block imports %}{% endblock %}
+		 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Joseluismunevar@gmail.com">
+
+
+    <!--CSS-->    
+    <link rel="stylesheet" type="text/css" href="/static/css/elements.css"> 
+    <link href="/static/css/estilos.css" rel="stylesheet" type="text/css">
+    <!-- js -->
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/lightbox.js"></script>
+    <script type="text/javascript" src="/static/js/login.js"></script>
+	</head>
+
+<body>
+<section id="containertab">
+    <div class="colortab">a</div>
+    <div class="colortab">b</div>
+    <div class="colortab">c</div>
+    <div class="colortab">f</div>
+    <div class="colortab">a</div>
+</section>
+
+	<header>
+	 <nav>
+
+      <a href="/" ><img id="logo" src="/static/img/logo.png" alt="logo de viantioquia" href="#"/></a>
+    
+        <a class="buttom-menu"></a>
+            <div id="menu">
+                <ul>
+                    <li><a href="planear-hoteles.html">Planea tu viaje</a></li>
+                    <li><a href="#">Actividades</a></li>
+                    <li id="mostrar"><a href="#">Municipios</a></li>
+                    <li><a id ="popup" onclick ="div_show()">contacto</a></li>
+                    <li>registro</li>
+                    <button><a href="#">login</a></button>
+                    <fb:login-button scope="public_profile,email" onlogin="login();"></fb:login-button>
+    
+    <div id="fb-root"></div>                                                         
+                </ul>
+
+            </div>
+    </nav>
+</header>
+
+
+<div id ="bdy" onclick = "check(event)" style="overflow:hidden;">
+ 
+ <div id="abc">
+ 
+     <!-- Popup comienza aqui-->
+ <div id="popupContact"> 
+    <!-- contact form -->
+        <form action="#" method="post" id="form" >
+            <img src="img/3.png" id="close"/>
+            <h2>Contactanos</h2><hr/>
+            <input type="text" name="name" id="name" placeholder="Name"/>
+            
+            <input type="text" name="email" id="email" placeholder="Email"/>
+            
+            <textarea name="message" placeholder="Message" id="msg"></textarea>
+            
+            <a id="submit" href="javascript: check_empty()">enviar</a>  
+        </form>
+ </div> 
+
+ </div>
+ </div>
+ <!-- Popup div termina aqui -->
+
+       
+          <script type="text/javascript">
+            function mostrarbarra(){
+                $('#mostrar').slideToggle();
+                return false;
+                }
+
+                // Eventos
+                $('#mostrar').click( mostrarbarra);
+
+          </script>
+          
+            <script>
+            
+            function login(){
+                FB.getLoginStatus(function(res){
+                
+                    if(res.status == 'connected'){
+                        console.log( res );
+                        
+                        FB.api('/me', function(response){
+                            console.log('response: ' + JSON.stringify(response) );
+                        });
+                    }
+                    else{
+                        FB.login(function(response){
+                            console.log('Response: ' + response);                           
+                        }, {scope: 'email', return_scopes: true });
+                    }
+                    
+                });
+            }
+                        
+        </script>
+
+	{% block container1 %}
+	{% endblock %}
+
+	{% block container2 %}
+	{% endblock %}
+
+	{% block container3 %}
+	{% endblock %}
+
+ 			<footer>
+                 <label>Ayudanos a seguir creciendo</label>
+               	 <input type="text" placeholder="Email">
+            </footer> 
+</body>
+</html>
