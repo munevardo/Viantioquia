@@ -1,13 +1,28 @@
+# -*- coding: utf-8 -*-
 from django import forms
-from django.forms import widgets
+
+DEPARTMENTS = (
+	('', 'Departamento'),
+	('atioquia', 'Antioquia',), 
+	('amazonas', 'Amazonas',)
+)
+
+TOWNS = (
+	('', 'Municipio'),
+	('medellin', 'Medellín',),
+	('cali', 'Cali',),
+	('bogota', 'Bogotá',)
+)
 
 class HotelForm(forms.Form):
-	address = forms.CharField()
-	img = forms.ImageField()
-	description = forms.CharField(required=True)
-	price = forms.IntegerField()
-	title = forms.CharField()
-	ratings = forms.FloatField(min_value=0, max_value=5, 
-		widget = forms.HiddenInput())
-	department = forms.CharField(required=True)
-	town = forms.CharField(required=True)
+	name = forms.CharField(label="Nombre", required=True)
+	address = forms.CharField(label="Dirección", required=False)
+	img = forms.ImageField(label="Imagen", required=False)
+	description = forms.CharField(label="Descripción", required=True, 
+		widget=forms.Textarea)
+	price = forms.IntegerField(label="Precio", required=False)
+	title = forms.CharField(label="Título", required=False)
+	department = forms.ChoiceField(label="Departamento", required=True, 
+		choices=DEPARTMENTS)
+	town = forms.ChoiceField(label="Municipio", required=True, 
+		choices=TOWNS)

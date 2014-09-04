@@ -5,5 +5,6 @@ urlpatterns = patterns('',
     url(r'^$', 'backend.views.landing_views.index'),
     url(r'^jardin/$', 'backend.views.landing_views.jardin'),
     url(r'^hispania/$', 'backend.views.landing_views.hispania'),
-    url(r'^andes/$', 'backend.views.landing_views.andes')
+    url(r'^andes/$', 'backend.views.landing_views.andes'),
+    url(r'^test/$', 'backend.views.landing_views.test'),
 ) + staticfiles_urlpatterns()
