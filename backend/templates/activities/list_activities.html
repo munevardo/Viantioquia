@@ -6,26 +6,28 @@
 
 {% block header %}
 
-<header id="yo" class="Header">
+
+
+		<header id="yo" class="Header">
             
             <figure class="Header-imageContainer">
-                <a href="/"><img src="/static/img/cicloicon.jpg" alt="imagen restaurante  icon" class="Header-image"/></a>
+                <a href="/"><img src="/static/img/cicloicon.jpg" alt="imagen actividad icon" class="Header-image"/></a>
                 <figcaption class="Header-imageDescription">
-                    <a class="Header-link">@Restaurantes</a>
+                    <a class="Header-link">@Actividades</a>
                 </figcaption>
             </figure>
         </header>
-
 {% endblock %}
+
 
 
 
 {% block content %}
 
-	<div class="restaurants">
+	<div class="activities">
 			{% for hotel in hotels %}
-		<div class="restaurant">
-				<!--aqui van a ir los restaurantes por la gracia del señor-->
+		<div class="activitie">
+				<!--aqui van a ir los hoteles por las actividades del señor-->
 		</div>
 			{% endfor %}
 	</div>

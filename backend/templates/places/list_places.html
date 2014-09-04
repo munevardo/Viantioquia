@@ -5,35 +5,29 @@
 
 
 {% block header %}
-
 <header id="yo" class="Header">
             
             <figure class="Header-imageContainer">
-                <a href="/"><img src="/static/img/naturaicon.jpg" alt="Imagen personal" class="Header-image"/></a>
+                <a href="/"><img src="/static/img/naturaicon.jpg" alt="imagen actividad icon" class="Header-image"/></a>
                 <figcaption class="Header-imageDescription">
-                    <a class="Header-link">@HispaniaAntioquia</a>
+                    <a class="Header-link">@Lugares Naturales</a>
                 </figcaption>
             </figure>
         </header>
-
 {% endblock %}
 
 
-{% block container %}
 
-	<div class="hotels">
+{% block content %}
+
+	<div class="places">
 			{% for hotel in hotels %}
-				<div class="hotel">
-						<!--aqui van a ir los hoteles por la gracia del señor-->
-						<div>Nombre: {{ hotel.name }}</div>
-
-						
-						<div>Direccion: {{ hotel.address }}</div>
-				</div>
+		<div class="place">
+				<!--aqui van a ir los lugares por la gracia del señor-->
+		</div>
 			{% endfor %}
 	</div>
 
 {% endblock %}
-
 
 

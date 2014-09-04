@@ -9,23 +9,18 @@ def hotels(request):
 	return hotels_page(request, 1)
 	
 	
-	
 ################################################################
 
 
 
 def hotels_page(request, page):
-	if request.method == 'POST':
-		r = {'next': page+1, 'prev': page-1, 'post': request.POST.get('text')}
-	else:
-		r = {'next': page+1, 'prev': page-1}	
-	return render(request, 'hotels/list_hotels.html', r)
+	return render(request, 'hotels/list_hotels.html', {
+		'hotels': HotelModel.query().fetch()
+	})
 	
 	
 	
 ################################################################	
-
-
 
 
 def new(request):
@@ -51,9 +46,10 @@ def new(request):
 			
 			hotel.put()
 		
-			return HttpResponseRedirect('/')
+			return HttpResponseRedirect('/hoteles/')
 			
 		else:
 			return render(request, 'hotels/new.html', {
 				'form': form
 			})
+
