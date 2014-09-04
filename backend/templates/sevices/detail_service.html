@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		{% block description %}{% endblock %}
+		<title>{% block title %}{% endblock %}</title>
+		
+		{% block imports %}{% endblock %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Joseluismunevar@gmail.com">
+
+
+
+    <!--js-->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script type="text/javascript" src="/statics/js/Hispania-cicla.js"></script>
+        <script type="text/javascript" src="/statics/js/SitiosInteres.js"></script>
+<!--css-->
+  <link rel="stylesheet" href="/statics/css/style_servicies.css">
+
+
+ <header id="yo" class="Header">
+            <nav class="MainMenu-hoteles">
+                <ul class="MainMenu-list">
+                <liclass="MainMenu-item">
+
+                <a class="MainMenu-link" href="hispania.html">volver</a>
+                </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#">¿Quiero Aportar?</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="actividades-hispania.html">Actividades</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <figure class="Header-imageContainer">
+                <a href="index.html"><img src="img/descansoicon.jpg" alt="Imagen personal" class="Header-image"/></a>
+                <figcaption class="Header-imageDescription">
+                    <a class="Header-link">@Andalucía</a>
+                </figcaption>
+            </figure>
+        </header>
+
+
+
+      {% block header %}{% endblock %}
+      {% block content %}{% endblock %}
+
+
+
+
+
+        <footer id="contacto" class="Footer">
+            
+            <label>ayudanos a seguir creciendo</label>
+                <input type="text" placeholder="email">
+        </footer>
+    </body>
+</html>

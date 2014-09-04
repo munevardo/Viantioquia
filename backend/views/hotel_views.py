@@ -32,4 +32,3 @@ def new(request):
 			return render(request, 'hotels/new.html', {
 				'form': form
 			})
-	
