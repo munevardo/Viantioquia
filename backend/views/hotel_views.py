@@ -5,9 +5,9 @@ from backend.forms.hotel import HotelForm
 from backend.models import HotelModel, TownModel, DepartmentModel
 
 
-def index(request):
-	return render(request, 'hotels/index.html', {
-		'form': HotelForm()
+def hotels(request):
+	return render(request, 'hotels/list_hotels.html', {
+		'hotels': HotelModel.query().fetch()
 	})
 	
 	
@@ -15,7 +15,8 @@ def new(request):
 
 	if request.method == 'GET':
 		return render(request, 'hotels/new.html', {
-			'form': HotelForm()
+			'form': HotelForm(),
+			'form_url': '/nuevo/'
 		})
 		
 	else:
@@ -40,3 +41,4 @@ def new(request):
 			return render(request, 'hotels/new.html', {
 				'form': form
 			})
+

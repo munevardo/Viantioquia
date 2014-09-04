@@ -21,6 +21,18 @@ font-family: 'Titillium Web', sans-serif;
     margin: 0 auto;
 }
 
+
+.cicloheader{background-image: url('../img/cicloheader.jpg');}
+.Andalucia{background-image: url('../img/Andalucia-hotel.jpg');}
+.casadellago{background-image: url('../img/Andalucia-hotel.jpg');}
+.casaJuana{background-image: url('../img/Andalucia-hotel.jpg');}
+.casaLuna{background-image: url('../img/Andalucia-hotel.jpg');}
+.ElGuaico{background-image: url('../img/Andalucia-hotel.jpg');}
+
+
+
+
+
 /* Componentes */
 
 
@@ -67,12 +79,6 @@ font-family: 'Titillium Web', sans-serif;
 
 
 
-.cicloheader{background-image: url('../img/cicloheader.jpg');}
-.Andalucia{background-image: url('../img/Andalucia-hotel.jpg');}
-.casadellago{background-image: url('../img/Andalucia-hotel.jpg');}
-.casaJuana{background-image: url('../img/Andalucia-hotel.jpg');}
-.casaLuna{background-image: url('../img/Andalucia-hotel.jpg');}
-.ElGuaico{background-image: url('../img/Andalucia-hotel.jpg');}
 
 .Header{
     background-position: center;
@@ -86,8 +92,15 @@ font-family: 'Titillium Web', sans-serif;
 
 
 
+.hotels{
 
+    text-align: center; 
+}
 
+.hotel{
+
+    display: inline-block;
+}
 
 
 /* Header */
