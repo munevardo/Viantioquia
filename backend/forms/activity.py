@@ -36,6 +36,7 @@ class ActivityForm(forms.Form):
 		choices=TOWNS)
 		
 	start = forms.DateField(label="Fecha Inicio", required=True,
-		widget=forms.DateInput(attrs={}))
+		widget=forms.DateInput(attrs={'placeholder': '(mm/dd/aaaa)', 'type': 'date', 'class': 'big-input'}))
+	#poner clase en los formularios python. 
 	
 	end = forms.DateField(label="Fecha Fin", required=True)

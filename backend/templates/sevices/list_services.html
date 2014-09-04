@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		{% block description %}{% endblock %}
+		<title>{% block title %}{% endblock %}</title>
+		
+		{% block imports %}{% endblock %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Joseluismunevar@gmail.com">
+
+
+
+    <!--js-->
+        <script type="text/javascript" src="/static/js/Hispania-cicla.js"></script>
+        <script type="text/javascript" src="/static/js/SitiosInteres.js"></script>
+<!--css-->
+  <link rel="stylesheet" href="/static/css/style_services.css">
+
+
+
+<nav class="MainMenu-hoteles">
+                <ul class="MainMenu-list">
+                <liclass="MainMenu-item">
+
+                <a class="MainMenu-link" href="hispania.html">volver</a>
+                </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#">¿Quiero Aportar?</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="actividades-hispania.html">Actividades</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+        {% block header %}{%endblock%}
+         {% block container %}{%endblock%}
+
+
+        <footer id="contacto" class="Footer">
+            
+            <label>ayudanos a seguir creciendo</label>
+                <input type="text" placeholder="email">
+        </footer>
+    </body>
+</html>
+
+

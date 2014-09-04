@@ -1,0 +1,53 @@
+{% extends "sevices/list_services.html"%}
+
+
+{% block titiel %}Nuevo aporte a la comunidad{% endblock %}
+
+{% block imports %}
+	<style>
+		input *[text]{
+			border: 1px green solid;
+		}
+
+		.rojo{
+			border: 1px red solid;
+		}
+	</style>
+{% endblock %}
+
+{% block header %}
+
+<header id="" class="Header">
+            
+            <figure class="Header-imageContainer">
+                <a href="/"><img src="/static/img/profil.png" alt="Imagen profil" class="Header-image"/></a>
+                <figcaption class="Header-imageDescription">
+                    <a class="Header-link">@JuanPabloArango</a>
+                </figcaption>
+            </figure>
+        </header>
+
+{% endblock %}
+
+{% block container %}
+
+<!--aqui va el formulario-->
+	
+	<form action="/nuevo/" method="POST">
+	{% csrf_token %} 
+	{% for input in form %}
+
+		<div>
+			{{ input.errors }}
+			<label>{{ input.label }}</label>
+			{{ input }}
+		</div>
+
+	{% endfor %}
+
+	<input type="submit" value="Registrar"/>
+	</form>
+
+{% endblock %}
+
+

@@ -8,3 +8,11 @@ def index(request):
 	return render(request, 'hotels/index.html', {
 		'form': HotelForm()
 	})
+def hotels(request):
+	return render(request, 'hotels/list_hotels.html')
+
+def new(request):
+	return render(request, 'hotels/new.html', {
+		'form': HotelForm()
+	})
+
