@@ -5,12 +5,29 @@ from backend.forms.hotel import HotelForm
 from backend.models import HotelModel, TownModel, DepartmentModel
 
 
-def index(request):
-	return render(request, 'hotels/index.html', {
-		'form': HotelForm()
-	})
+def hotels(request):
+	return hotels_page(request, 1)
 	
 	
+	
+################################################################
+
+
+
+def hotels_page(request, page):
+	if request.method == 'POST':
+		r = {'next': page+1, 'prev': page-1, 'post': request.POST.get('text')}
+	else:
+		r = {'next': page+1, 'prev': page-1}	
+	return render(request, 'hotels/list_hotels.html', r)
+	
+	
+	
+################################################################	
+
+
+
+
 def new(request):
 
 	if request.method == 'GET':

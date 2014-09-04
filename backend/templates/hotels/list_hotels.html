@@ -18,10 +18,27 @@
 
 {% endblock %}
 
-{% block content %}
 
 
+{% block container %}
 
+	{% if page %}
+		<h1>Page: {{ page }}</h1>
+	{% endif %}
+	
+	{% if post %}
+		<h1>Post: {{ post }}</h1>
+	{% endif %}
+	
+	<form action="/hoteles/" method="POST">
+		{% csrf_token %}
+		<input type="text" name="text" placeholder="text"/>
+		<input type="submit" value="Send"/>
+	</form>
+	
+	
+	<a href="/hoteles/{{ prev }}">prev</a>
+	<a href="/hoteles/{{ next }}">next</a>
 
 {% endblock %}
 
