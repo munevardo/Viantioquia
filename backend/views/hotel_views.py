@@ -8,3 +8,22 @@ def index(request):
 	return render(request, 'hotels/index.html', {
 		'form': HotelForm()
 	})
+	
+	
+def new(request):
+
+	if request.method == 'GET':
+		return render(request, 'hotels/new.html', {
+			'form': HotelForm()
+		})
+		
+	else:
+		form = HotelForm(request.POST)
+		
+		if form.is_valid():
+			return HttpResponseRedirect('/')
+		else
+			return render(request, 'hotels/new.html', {
+				'form': form
+			})
+	

@@ -7,8 +7,7 @@ class BaseModel(ndb.Model):
 	price = ndb.IntegerProperty(required=False)
 	title = ndb.StringProperty(required=False)
 	ratings = ndb.FloatProperty(required=False, default=0.0)
-	department = ndb.StringProperty(required=True)
-	town = ndb.StringProperty(required=True)
+	town = ndb.StructuredProperty(TownModel, required=False, repeated=True)
 	
 
 class HotelModel(BaseModel):
@@ -25,9 +24,27 @@ class RestaurantModel(BaseModel):
 	name = ndb.StringProperty(requied=True, repeated=False)
 	
 	
-class UserModel(BaseModel):
+class SiteModel(ndb.Model):
+	address = ndb.StringProperty(requied=False)
+	img = ndb.BlobProperty(required=False)
+	description = ndb.TextProperty(required=True)
+	title = ndb.StringProperty(required=False)
+	ratings = ndb.FloatProperty(required=False, default=0.0)
+	town = ndb.StructuredProperty(TownModel, required=False, repeated=True)
+	
+	
+class UserModel(ndb.Model):
 	name = ndb.StringProperty(requied=True)
 	img = ndb.GenericProperty(required=False)
 	username = ndb.StringProperty(required=True, repeated=False)
 	email = ndb.StringProperty(required=True)
 	password = ndb.StringProperty(required=True)
+	
+
+class DepartmentModel(ndb.Model):
+	name = ndb.StringProperty(required=True, repeated=False)
+	
+
+class TownModel(ndb.Model):
+	name = ndb.StringProperty(required=True, repeated=False)
+	department = ndb.StructuredProperty(DepartmentModel, required=True, repeated=True)

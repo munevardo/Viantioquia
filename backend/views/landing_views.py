@@ -4,6 +4,8 @@ from django.shortcuts import render
 # Import Forms
 from backend.forms.hotel import HotelForm
 from backend.forms.activity import ActivityForm
+from backend.forms.know_more import KnowMoreForm
+from backend.forms.contact import ContactForm
 
 
 def index(request):
@@ -24,13 +26,13 @@ def hispania(request):
 	
 def test(request):
 	if request.method == 'GET':
-		form = ActivityForm()
+		form = HotelForm()
 	else:
-		form = ActivityForm(request.POST)
+		form = HotelForm(request.POST)
 	
 	if form.is_valid():
 		return render(request, 'test.html', {
-			'form': ActivityForm(),
+			'form': HotelForm(),
 			'msg': 'Form send OK!'
 		})
 	else:
