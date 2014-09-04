@@ -1,7 +1,8 @@
 from django.http import HttpResponseRedirect
 from google.appengine.ext import ndb
-from backend.forms.hotel import HotelForm
 from django.shortcuts import render
+from backend.forms.hotel import HotelForm
+from backend.models import HotelModel
 
 
 def index(request):
@@ -21,7 +22,12 @@ def new(request):
 		form = HotelForm(request.POST)
 		
 		if form.is_valid():
+		
+			hotel = HotelModel()
+			hotel.name = form.cleaned_data['name']
+		
 			return HttpResponseRedirect('/')
+			
 		else
 			return render(request, 'hotels/new.html', {
 				'form': form
