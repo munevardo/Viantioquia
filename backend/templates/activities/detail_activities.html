@@ -1,1 +1,89 @@
-detail_activities.html
+{% extendede "sevices/detail_services.html" %}
+
+
+{% block titiel %}rutas naturales hoteles  hispania Antioquia{% endblock %}
+
+
+
+
+{% block nav %}
+
+{% block nav %}
+    <nav class="MainMenu-hoteles">
+                <ul class="MainMenu-list">
+                <liclass="MainMenu-item">
+
+                <a class="MainMenu-link" href="hispania.html">volver</a>
+                </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#">¿Quiero Aportar?</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="actividades-hispania.html">Actividades</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+{%endblock%}
+{% block header %}
+
+<header id="yo" class="Header">
+            
+            <figure class="Header-imageContainer">
+                <a href="index.html"><img src="img/naturaicon.jpg" alt="icono natural" class="Header-image"/></a>
+                <figcaption class="Header-imageDescription">
+                    <a class="Header-link">@eventoNatural</a>
+                </figcaption>
+            </figure>
+        </header>
+{% endblock %}
+
+
+{% block content %}
+<body>
+        <section id="container">
+            <h2 class="Work-title u-title"></h2>
+
+<p>El parapente (contracción de paracaídas de pendiente) es un deporte nacido, a fines del siglo XX, por la inventiva de montañeros que querían bajar volando mediante un paracaídas desde las cimas que habían ascendido.
+El ala, y a veces todo el equipo, se llama así con el mismo nombre, parapente. La definición técnica sería algo así: planeador ligero flexible. Planeador porque no consta de motor y flexible porque no hay partes rígidas que compongan el ala, por lo que puede ser transportado en el maletero de un coche. El peso de todo el equipo, suele rondar los 25-30 kg aunque hay equipos para montaña con una masa aproximada de unos 8 kg . El piloto y ocasionalmente el pasajero de parapente estarán equipados con el equipo de seguridad obligatorio, cascos y paracaídas de emergencia y con diversos instrumentos electrónicos: variómetro o altivario, GPS y equipo de radio.</p>
+
+            <article  class="container-item"id="map-samanes">
+                
+                <!--mapas-->   
+
+            </article>
+            <article class="container-item">
+                <figure class="">
+                    <img class="" src="img/parapente.jpg" alt="Es la descripcion de mi imagen">
+                </figure>
+            </article>
+            <article class="container-item">
+                <p>
+                    <h2>Tarifas</h2>                
+                    Plan A:<br>$160.000<br>
+                    INCLUYE:   sesion + Seguro de asistencia médica<br>
+                </p>
+
+            </article>
+            <article class="container-item">
+                    <h2>Formas de Pago</h2>
+                    <p>Consignación en Bancolombia<br>
+                    cuenta ahorros No 00000000000</p>
+                <article id="container-img">
+                    <figure >
+                        <img src="img/ps.png">
+                    </figure>
+                    <figure>
+                        <img src="img/efecty.png">
+                    </figure>
+                    <figure>
+                        <img src="img/viabalot.png">
+                    </figure>
+                </article>
+            </article>
+        </section>
+</body>
+
+{% endblock %}

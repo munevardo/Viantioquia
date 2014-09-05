@@ -5,6 +5,7 @@ html {
 }
 body {
   margin: 0;
+    background: #bcbcbc;
 }
 article,
 aside,
@@ -178,13 +179,20 @@ th {
   padding: 0;
 }
 @font-face {
-  font-family: "Titillium-Semibold";
-  src: url("../fonts/Titillium-Semibold.otf");
-  font-family: "Titillium-Bold";
-  src: url("../fonts/Titillium-Bold.otf");
   font-family: "Titillium-LightUpright";
   src: url("../fonts/Titillium-LightUpright.otf");
 }
+
+@font-face {
+font-family: "Titillium-Semibold";
+src: url("../fonts/Titillium-Semibold.otf");
+}
+  
+@font-face {
+font-family: "Titillium-Bold";
+src: url("../fonts/Titillium-Bold.otf");
+}
+
 #ponerbox {
   display: none;
   position: absolute;
@@ -339,6 +347,7 @@ footer {
   background-repeat: no-repeat;
   padding: 9%;
   text-align: center;
+  margin-bottom:1em;
 }
 #logo {
   width: 55%;
@@ -406,7 +415,7 @@ footer {
 }
 #municipios {
   background: #bcbcbc;
-  text-align: center;
+  text-align: center; 
 }
 .Municipio {
   background: #fff;

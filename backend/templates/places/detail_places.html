@@ -1,1 +1,89 @@
-detail_places.html
+{% extendede "sevices/detail_services.html" %}
+
+
+{% block titiel %}rutas naturales hoteles  hispania Antioquia{% endblock %}
+
+
+
+
+{% block nav %}
+
+{% block nav %}
+    <nav class="MainMenu-hoteles">
+                <ul class="MainMenu-list">
+                <liclass="MainMenu-item">
+
+                <a class="MainMenu-link" href="hispania.html">volver</a>
+                </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#">¿Quiero Aportar?</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="actividades-hispania.html">Actividades</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+{%endblock%}
+{% block header %}
+
+<header id="yo" class="Header">
+            
+            <figure class="Header-imageContainer">
+                <a href="index.html"><img src="img/naturaicon.jpg" alt="Imagen personal" class="Header-image"/></a>
+                <figcaption class="Header-imageDescription">
+                    <a class="Header-link">@eventoNatural</a>
+                </figcaption>
+            </figure>
+        </header>
+{% endblock %}
+
+
+
+{% block content %}
+<body>
+        <section id="container">
+            <h2 class="Work-title u-title"></h2>
+
+<p>Discovery Cove, un enorme complejo acuático en Orlando, Florida, donde los visitantes pueden nadar con delfines y bucear con peces tropicales, se llevó el primer lugar para posicionarse como el mejor parque de diversiones.</p>
+
+            <article  class="container-item"id="map-samanes">
+                
+                <!--mapas-->    
+
+            </article>
+            <article class="container-item">
+                <figure class="">
+                    <img class="" src="img/Andalucia-hotel.jpg" alt="Es la descripcion de mi imagen">
+                </figure>
+            </article>
+            <article class="container-item">
+                <p>
+                    <h2>Tarifas</h2>                
+                    Plan A:<br>$160.000<br>
+                    INCLUYE:   sesion + Seguro de asistencia médica<br>
+                </p>
+
+            </article>
+            <article class="container-item">
+                    <h2>Formas de Pago</h2>
+                    <p>Consignación en Bancolombia<br>
+                    cuenta ahorros No 00000000000</p>
+                <article id="container-img">
+                    <figure >
+                        <img src="img/ps.png">
+                    </figure>
+                    <figure>
+                        <img src="img/efecty.png">
+                    </figure>
+                    <figure>
+                        <img src="img/viabalot.png">
+                    </figure>
+                </article>
+            </article>
+        </section>
+</body>
+
+{% endblock %}
