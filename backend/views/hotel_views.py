@@ -15,7 +15,7 @@ def hotels(request):
 
 def hotels_page(request, page):
 	return render(request, 'hotels/list_hotels.html', {
-		'hotels': HotelModel.query().fetch()
+		'hotels': HotelModel.query().fetch(10)
 	})
 	
 	

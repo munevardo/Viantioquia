@@ -7,6 +7,7 @@ urlpatterns = patterns('',
     url(r'^hispania/$', 'backend.views.landing_views.hispania'),
     url(r'^andes/$', 'backend.views.landing_views.andes'),
     url(r'^test/$', 'backend.views.landing_views.test'),    
+    url(r'^hoteles/$', 'backend.views.hotel_views.hotels'),
     url(r'^hoteles/(?P<page>\d*)/$', 'backend.views.hotel_views.hotels_page'),
     url(r'^hoteles/nuevo/$', 'backend.views.hotel_views.new')  
 ) + staticfiles_urlpatterns()

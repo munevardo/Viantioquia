@@ -22,7 +22,7 @@ class HotelForm(forms.Form):
 		widget=forms.Textarea)
 	price = forms.IntegerField(label="Precio", required=False)
 	title = forms.CharField(label="Título", required=False)
-	#department = forms.ChoiceField(label="Departamento", required=True, 
-	#	choices=DEPARTMENTS)
-	#town = forms.ChoiceField(label="Municipio", required=True, 
-	#	choices=TOWNS)
+	department = forms.ChoiceField(label="Departamento", required=True, 
+		choices=DEPARTMENTS)
+	town = forms.ChoiceField(label="Municipio", required=True, 
+		choices=TOWNS)
