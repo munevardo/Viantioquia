@@ -4,16 +4,32 @@
 {% block titiel %}Nuevo aporte a la comunidad{% endblock %}
 
 {% block imports %}
-	<style>
-		input *[text]{
-			border: 1px green solid;
-		}
-
-		.rojo{
-			border: 1px red solid;
-		}
-	</style>
+<!--importacioens especiales-->
 {% endblock %}
+
+
+{% block nav %}
+    <nav class="MainMenu-hoteles">
+                <ul class="MainMenu-list">
+                <liclass="MainMenu-item">
+
+                <a class="MainMenu-link" href="/hispania/">volver</a>
+                </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="/hotel/nuevo/">¿Quiero Aportar?</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="
+                        /actividades/">Actividades</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+{%endblock%}
+
+
 
 {% block header %}
 

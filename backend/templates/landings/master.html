@@ -6,9 +6,9 @@
 		<title>{% block title %}{% endblock %}</title>
 		
 		{% block imports %}{% endblock %}
-		 <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
+    <meta name="description" content="todo lo que buscas de hispania de antioquia y sus arededores">
     <meta name="author" content="Joseluismunevar@gmail.com">
 
 
@@ -25,7 +25,7 @@
 <section id="containertab">
     <div class="colortab">a</div>
     <div class="colortab">b</div>
-    <div class="colortab">c</div>
+    <div class="colortab">c</div> 
     <div class="colortab">f</div>
     <div class="colortab">a</div>
 </section>
@@ -39,19 +39,44 @@
             <div id="menu">
                 <ul>
                     <li><a href="planear-hoteles.html">Planea tu viaje</a></li>
-                    <li><a href="#">Actividades</a></li>
-                    <li id="mostrar"><a href="#">Municipios</a></li>
+                    <li><a href="/actividades/">Actividades</a></li>
+                    <li><a href="/andes/">Andes</a></li>
+                    <li><a href="/Jardin/">Jardin</a></li>
+                     <li><a href="/hispania/">Hispania</a></li>
                     <li><a id ="popup" onclick ="div_show()">contacto</a></li>
-                    <li>registro</li>
-                    <button><a href="#">login</a></button>
                     <fb:login-button scope="public_profile,email" onlogin="login();"></fb:login-button>
-    
-    <div id="fb-root"></div>                                                         
+                    <div id="fb-root"></div>
                 </ul>
-
             </div>
     </nav>
 </header>
+
+<div id ="bdy" onclick = "check(event)" style="overflow:hidden;">
+ 
+ <div id="abc">
+ 
+     <!-- Popup comienza aqui-->
+ <div id="popupContact"> 
+    <!-- contact form -->
+        <form action="#" method="post" id="form" >
+            <img src="/static/img/3.png" id="close"/>
+            <h2>Contactanos</h2><hr/>
+            <input type="text" name="name" id="name" placeholder="Name"/>
+            
+            <input type="text" name="email" id="email" placeholder="Email"/>
+            
+            <textarea name="message" placeholder="Message" id="msg"></textarea>
+            
+            <a id="submit" href="javascript: check_empty()">enviar</a>  
+        </form>
+ </div> 
+
+ </div>
+ </div>
+ <!-- Popup div termina aqui -->
+
+
+
 
 
 <div id ="bdy" onclick = "check(event)" style="overflow:hidden;">
@@ -79,39 +104,39 @@
  <!-- Popup div termina aqui -->
 
        
-          <script type="text/javascript">
-            function mostrarbarra(){
-                $('#mostrar').slideToggle();
-                return false;
-                }
+<script type="text/javascript">
+function mostrarbarra(){
+    $('#mostrar').slideToggle();
+    return false;
+    }
 
-                // Eventos
-                $('#mostrar').click( mostrarbarra);
+    // Eventos
+    $('#mostrar').click( mostrarbarra);
 
-          </script>
-          
-            <script>
+</script>
+
+<script>
+
+function login(){
+    FB.getLoginStatus(function(res){
+    
+        if(res.status == 'connected'){
+            console.log( res );
             
-            function login(){
-                FB.getLoginStatus(function(res){
-                
-                    if(res.status == 'connected'){
-                        console.log( res );
-                        
-                        FB.api('/me', function(response){
-                            console.log('response: ' + JSON.stringify(response) );
-                        });
-                    }
-                    else{
-                        FB.login(function(response){
-                            console.log('Response: ' + response);                           
-                        }, {scope: 'email', return_scopes: true });
-                    }
-                    
-                });
-            }
-                        
-        </script>
+            FB.api('/me', function(response){
+                console.log('response: ' + JSON.stringify(response) );
+            });
+        }
+        else{
+            FB.login(function(response){
+                console.log('Response: ' + response);                           
+            }, {scope: 'email', return_scopes: true });
+        }
+        
+    });
+}
+            
+</script>
 
 	{% block container1 %}
 	{% endblock %}
